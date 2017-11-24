@@ -25,10 +25,8 @@ class UsersController extends AppController
     {
         //Lay du lieu trong table users
         $array_user = $this->User->find('all', array(
-            'conditions' => array(
-                'id > 0'
-            ),
-            'recursive' => -1
+            'conditions'=>array('id > 0'),
+            'recursive'   =>-1
         ));
         //đưa dữ liệu lấy được qua view bằng biến users
         $this->set('users', $array_user);
