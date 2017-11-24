@@ -73,6 +73,8 @@ $(document).ready(function() {
                                             ?>
                                             <?php echo $this->Html->link('Del',array('controller'=>'news','action'=>'delete',$val['News']['id']), array('class' => 'btn btn-danger'));
                                             ?>
+                                            <?php echo $this->Html->link('Ajax',array('controller'=>'news','action'=>'ajax',$val['News']['id']), array('class' => 'btn btn-info'));
+                                            ?>
                                         </td>
                                     </tr>
                                     <?php }?>

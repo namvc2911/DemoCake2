@@ -117,6 +117,9 @@ class NewsController extends AppController
         $this->set('data', $data);
 
     }
+    public function admin_ajax(){
+        
+    }
     
 }
 

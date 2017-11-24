@@ -1,8 +1,8 @@
-<div class="container">
+ <div class="container">
         <div class="row">
 
             <!-- Blog Post Content Column -->
-           <div class="col-lg-9">
+            <div class="col-lg-9">
 
                 <!-- Blog Post -->
 
@@ -52,67 +52,7 @@
             </div>
 
             <!-- Blog Sidebar Widgets Column -->
-            <div class="col-md-3">
-
-                <div class="panel panel-default">
-                    <div class="panel-heading"><b>Tin liên quan</b></div>
-                    <div class="panel-body">
-                        <!-- <?php print_r($data) ?> -->
-                        <!-- item -->
-                        <?php foreach($data as $key => $val){
-                                        
-                                    ?>
-                        <div class="row" style="margin-top: 10px;">
-                            <div class="col-md-5">
-                                <a href="detail.html">
-                                    <?php echo $this->Html->link('$key[News.title]',array('controller'=>'news','action'=>'review',$key['News']['id'])) ?>
-                                </a>
-                            </div>
-                            <div class="col-md-7">
-                                <a href="#"><b><?php echo $key['News']['title'] ?></b></a>
-                            </div>
-                            <p><?php echo $key['News']['content'] ?></p>
-                            <div class="break"></div>
-                        </div>
-                        <!-- end item -->
-                    <?php } ?>
-                        <!-- item -->
-                      
-                        <!-- end item -->
-                    </div>
-                </div>
-
-                <div class="panel panel-default">
-                    <div class="panel-heading"><b>Tin nổi bật</b></div>
-                    <div class="panel-body">
-
-                        <!-- item -->
-                        <?php foreach($data as $key => $val){
-                                        
-                                    ?>
-                        <div class="row" style="margin-top: 10px;">
-                            <div class="col-md-5">
-                                <a href="detail.html">
-                                    <?php echo $this->Html->link('$key[News.title]',array('controller'=>'news','action'=>'review',$key['News']['id'])) ?>
-                                </a>
-                            </div>
-                            <div class="col-md-7">
-                                <a href="#"><b><?php echo $key['News']['title'] ?></b></a>
-                            </div>
-                            <p><?php echo $key['News']['content'] ?></p>
-                            <div class="break"></div>
-                        </div>
-                        <!-- end item -->
-                    <?php } ?>
-                        <!-- end item -->
-
-                        <!-- item -->
-                        
-                        <!-- end item -->
-                    </div>
-                </div>
-                
-            </div>
+            
 
         </div>
         <!-- /.row -->
