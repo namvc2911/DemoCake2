@@ -106,7 +106,7 @@ class NewsController extends AppController
         $this->set('title_for_layout', 'News');
          $data = $this->News->find('all', array(
             'conditions' => array(
-                'id > 0'
+                'noibat>=1'
             ),
             'recursive' => -1
         ));

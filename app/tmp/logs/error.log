@@ -2426,3 +2426,57 @@ Stack Trace:
 #1 D:\xampp\htdocs\DemoCake\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(NewsController), Object(CakeRequest), Object(CakeResponse))
 #2 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2017-11-24 10:49:26 Error: [MissingActionException] Action NewsController::admin_image() could not be found.
+Exception Attributes: array (
+  'controller' => 'NewsController',
+  'action' => 'admin_image',
+)
+Request URL: /DemoCake/admin/news/image/320x150.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\DemoCake\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(NewsController), Object(CakeRequest), Object(CakeResponse))
+#2 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-11-24 10:50:38 Error: Fatal Error (4): syntax error, unexpected 'News' (T_STRING) in [D:\xampp\htdocs\DemoCake\app\View\News\admin_review.ctp, line 68]
+2017-11-24 10:50:38 Error: [FatalErrorException] syntax error, unexpected 'News' (T_STRING)
+Request URL: /DemoCake/admin/news/review
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'D:\\xampp\\htdocs...', 68)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'D:\\xampp\\htdocs...', 68, Array)
+#2 D:\xampp\htdocs\DemoCake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'D:\\xampp\\htdocs...', 68, Array)
+#3 D:\xampp\htdocs\DemoCake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-11-24 10:50:54 Error: [MissingActionException] Action NewsController::admin_image() could not be found.
+Exception Attributes: array (
+  'controller' => 'NewsController',
+  'action' => 'admin_image',
+)
+Request URL: /DemoCake/admin/news/image/320x150.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\DemoCake\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(NewsController), Object(CakeRequest), Object(CakeResponse))
+#2 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-11-24 10:52:52 Error: [MissingActionException] Action NewsController::admin_image() could not be found.
+Exception Attributes: array (
+  'controller' => 'NewsController',
+  'action' => 'admin_image',
+)
+Request URL: /DemoCake/admin/news/image/320x150.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\DemoCake\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(NewsController), Object(CakeRequest), Object(CakeResponse))
+#2 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-11-24 10:53:05 Error: [MissingActionException] Action NewsController::admin_image() could not be found.
+Exception Attributes: array (
+  'controller' => 'NewsController',
+  'action' => 'admin_image',
+)
+Request URL: /DemoCake/admin/news/image/320x150.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\DemoCake\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(NewsController), Object(CakeRequest), Object(CakeResponse))
+#2 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
