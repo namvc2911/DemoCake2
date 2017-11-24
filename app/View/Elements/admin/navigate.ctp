@@ -1,12 +1,12 @@
 <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
+        <span class="sr-only"> <?php echo $this->Html->link('Dashboads',array('controller'=>'dashboards','action'=>'admin_index'),array('escape'=>false)); ?></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         </button>
-        <?php echo $this->Html->link('Dashboads',array('controller'=>'dashboards','action'=>'admin_index'),array('escape'=>false)); ?>
+       
         
     </div>
     <!-- /.navbar-header -->
@@ -232,18 +232,7 @@
         <?php echo $this->Html->link('Dashboads',array('controller'=>'dashboards','action'=>'admin_index'),array('escape'=>false)); ?>
           
         </li>
-        <li>
-            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
-            <ul class="nav nav-second-level">
-                <li>
-                    <a href="flot.html">Flot Charts</a>
-                </li>
-                <li>
-                    <a href="morris.html">Morris.js Charts</a>
-                </li>
-            </ul>
-            <!-- /.nav-second-level -->
-        </li>
+        
        <li>
                     <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Users<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
@@ -268,6 +257,11 @@
                         </li>
                         <li>
                             <?php echo $this->Html->link('Add',array('controller'=>'news','action'=>'add'),array('escape'=>false))?>
+                            <!--Or-->
+                            <!--<a href="/admin/users/add">Add</a>-->
+                        </li>
+                        <li>
+                            <?php echo $this->Html->link('SearchAjax',array('controller'=>'news','action'=>'ajax'),array('escape'=>false))?>
                             <!--Or-->
                             <!--<a href="/admin/users/add">Add</a>-->
                         </li>

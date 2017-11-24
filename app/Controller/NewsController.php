@@ -3,6 +3,8 @@ class NewsController extends AppController
 {
     var $uses = "News";
     var $layout = "admin";
+    // var $components = array( 'RequestHandler' );
+    // var $helpers = array('Html','Ajax','Javascript');
     public function beforeFilter()
     {
         parent::beforeFilter();
@@ -10,12 +12,16 @@ class NewsController extends AppController
     public function admin_list()
     {
         $this->set('title_for_layout', 'News');
-        $data = $this->News->find('all', array(
+         $data = $this->News->find('all', array(
             'conditions' => array(
                 'id > 0'
             ),
             'recursive' => -1
         ));
+
+
+
+    
         $this->set('data', $data);
         
     }
@@ -27,7 +33,7 @@ class NewsController extends AppController
             ));
             if(!empty($data)){
                 $this->News->delete($id);
-                @unlink(WWW_ROOT.'img'.DS.'stories'.DS.$id.'.jpg');
+            
                 $this->Session->setFlash('Success','default',array('class'=>"alert alert-success"));
             }else{
                 $this->Session->setFlash('Error','default',array('class'=>"alert alert-success"));
@@ -97,7 +103,21 @@ class NewsController extends AppController
         }
 
         $this->set('detail', $detail);
+        $this->set('title_for_layout', 'News');
+         $data = $this->News->find('all', array(
+            'conditions' => array(
+                'id > 0'
+            ),
+            'recursive' => -1
+        ));
+
+
+
+    
+        $this->set('data', $data);
+
     }
+    
 }
 
 ?>

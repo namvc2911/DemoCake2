@@ -27,19 +27,21 @@ $(document).ready(function() {
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Bài viết</h1>
+                    <h1 class="page-header">News</h1>
                     <?php echo $this->Session->flash();?>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
-            <div class="row">
+           <div class="row">
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             Danh Sách Bài Viết
                         </div>
                         <!-- /.panel-heading -->
+                        </p>
+                        
                         <div class="panel-body">
                             <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>
@@ -49,6 +51,7 @@ $(document).ready(function() {
                                         <th>Content</th>
                                         <!-- <th>Images</th> -->
                                         <th>Ngày tạo</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                <tbody>
