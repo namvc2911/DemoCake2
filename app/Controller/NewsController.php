@@ -1,0 +1,103 @@
+<?php
+class NewsController extends AppController
+{
+    var $uses = "News";
+    var $layout = "admin";
+    public function beforeFilter()
+    {
+        parent::beforeFilter();
+    }
+    public function admin_list()
+    {
+        $this->set('title_for_layout', 'News');
+        $data = $this->News->find('all', array(
+            'conditions' => array(
+                'id > 0'
+            ),
+            'recursive' => -1
+        ));
+        $this->set('data', $data);
+        
+    }
+   public function admin_delete($id = null){
+        if($this->request->is('get')){
+            $data = $this->News->find('first', array(
+                'conditions'=>array('id = '.$id),
+                'recursive'   =>-1
+            ));
+            if(!empty($data)){
+                $this->News->delete($id);
+                @unlink(WWW_ROOT.'img'.DS.'stories'.DS.$id.'.jpg');
+                $this->Session->setFlash('Success','default',array('class'=>"alert alert-success"));
+            }else{
+                $this->Session->setFlash('Error','default',array('class'=>"alert alert-success"));
+            }
+            $this->redirect('list');
+        }
+    }
+    
+    public function admin_edit($id = null)
+    {
+        if ($this->request->is('post') || $this->request->is('put')) {
+            //print_r($this->request->data);exit();
+            $this->News->id = $id;
+            $this->News->set(array(
+                'date_updated' => date('Y:m:d H:i:s')
+            ));
+            if ($this->News->save($this->request->data)) {
+                $this->Session->setFlash('Success', 'default', array(
+                    'class' => "alert alert-success"
+                ));
+                $this->redirect(array(
+                    'action' => 'list'
+                ));
+            }
+        } else {
+            $this->News->id      = $id;
+            $this->request->data = $this->News->read(); //đọc thông tin user với $id, gán vào request->data hiển thị view
+        }
+    }
+    public function admin_add()
+    {
+        $this->set('title_for_layout', 'Add user');
+        if ($this->request->is('post') || $this->request->is('put')) {
+            $now = date('Y:m:d H:i:s');
+            $this->News->set(array(
+                'date_created' => $now
+            ));
+            $this->News->set(array(
+                'date_updated' => $now
+            ));
+            if ($this->News->save($this->request->data)) {
+                $this->Session->setFlash('Success', 'default', array(
+                    'class' => "alert alert-success"
+                ));
+                $this->redirect(array(
+                    'action' => 'list'
+                ));
+            }
+        }
+    }
+    public function admin_review($id = null){
+        $this->set('title_for_layout', 'Review');
+        $detail = $this->News->find('first', array(
+            
+            'conditions'=>array('News.id'=>$id),
+        ));
+        //$detail =  $this->News->find('first',array('conditions'=>array('News.id'=>$id)));
+        if(empty($detail['News']['view'])){
+            $detail['News']['view'] = 0;
+        }
+        $view = $detail['News']['view'];
+        $view = $view + 1;
+        $this->News->id = $id;
+        $data['News']['view'] = $view;
+        if ($this->News->save($data)) {
+          
+        }
+
+        $this->set('detail', $detail);
+    }
+}
+
+?>
