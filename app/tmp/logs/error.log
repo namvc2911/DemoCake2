@@ -2343,3 +2343,21 @@ Request URL: /DemoCake/template_admin/vendor/images/sort_asc.png
 Stack Trace:
 #0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2017-11-24 10:34:59 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_both.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 10:34:59 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_asc.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
