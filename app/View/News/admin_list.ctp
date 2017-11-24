@@ -56,10 +56,10 @@ $(document).ready(function() {
                                         
                                     ?>
                                     <tr>
-                                        <td width="200px"><?php echo $val['News']['id']?></td>
+                                        <td ><?php echo $val['News']['id']?></td>
 
-                                        <td width="200px"><?php echo $val['News']['title']?></td>
-                                        <td width="200px"><?php echo $val['News']['content']?></td>
+                                        <td ><?php echo $val['News']['title']?></td>
+                                        <td ><?php echo $val['News']['content']?></td>
                                         <!-- <td width="200px"><?php echo $val['News']['image']?></td> -->
                                         <td><?php echo $val['News']['create_at']?></td>
                                         <td>
