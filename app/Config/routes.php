@@ -49,7 +49,8 @@
 	//Page admin
 	Router::connect('/admin', array('controller' => 'users', 'action' => 'login', 'admin' => true));
 
-
+    // Router::paserExtensions();
+    // Router::setExtensions(array('json','xml','csv','rss','pdf'));
 
 /**
  * Load all plugin routes. See the CakePlugin documentation on
