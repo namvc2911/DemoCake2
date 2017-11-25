@@ -24,11 +24,11 @@
  * its action called 'display', and we pass a param to select the view file
  * to use (in this case, /app/View/Pages/home.ctp)...
  */
-	Router::connect('/', array('controller' => 'pages', 'action' => 'index'));
+	Router::connect('/', array('controller' => 'users', 'action' => 'login','admin'=>true));
 /**
  * ...and connect the rest of 'Pages' controller's URLs.
  */
-	Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
+	Router::connect('/pages/*', array('controller' => 'users', 'action' => 'login'));
 	Router::connect(
         '/the-loai/:id-:slug.html/*',
         array('controller' => 'pages', 'action' => 'view_genre'),
