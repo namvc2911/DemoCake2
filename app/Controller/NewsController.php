@@ -104,23 +104,43 @@ class NewsController extends AppController
 
         $this->set('detail', $detail);
         $this->set('title_for_layout', 'News');
-         $data = $this->News->find('all', array(
+          $data = $this->News->find('all', array(
             'conditions' => array(
-                'noibat>=1'
+                'id > 0'
             ),
             'recursive' => -1
         ));
 
 
-
     
         $this->set('data', $data);
 
+
     }
     public function admin_ajax(){
-        
+        if($this->request->is('post')){
+            $this->set('title_for_layout', 'News');
+            $data = $this->News->find('all', array(
+            'conditions' => array(
+                'News.title Like'=>'%'. $this->request->data['keyword'] . '%',
+            ),
+            'recursive' => -1
+            ));
+            $this->set('data',$data);
+        }
     }
-    
+    public function admin_findajax(){
+         if($this->request->is('post')){
+            $this->set('title_for_layout', 'News');
+            $data = $this->News->find('all', array(
+            'conditions' => array(
+                'News.title Like'=>'%'. $this->request->data['keyword'] . '%',
+            ),
+            'recursive' => -1
+            ));
+            $this->set('data',$data);
+        }
+    }
 }
 
 ?>
