@@ -21,12 +21,20 @@
                 <!-- Date/Time -->
                 <p><span class="glyphicon glyphicon-time"></span> Số lần xem: <?php echo $detail['News']['view'] ?></p>
                 
-                <p><span class="glyphicon glyphicon-time"></span> <?php echo $detail['News']['create_at'] ?></p>
+                <p><span class="glyphicon glyphicon-time"></span> Thời gian cập nhật <?php echo $detail['News']['create_at'] ?></p>
                 <hr>
 
                 <!-- Post Content -->
                 <p class="lead"><?php echo $detail['News']['content'] ?></p>
+                
+                <p>
+                    
+                <?php foreach($data as $item){
+                    echo "<br/>";
+                    echo $item['News']['title'];
 
+                } ?>
+            </p>
                 <hr>
 
                 <!-- Blog Comments -->

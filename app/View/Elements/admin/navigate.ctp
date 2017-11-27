@@ -1,7 +1,7 @@
 <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only"> <?php echo $this->Html->link('Dashboads',array('controller'=>'dashboards','action'=>'admin_index'),array('escape'=>false)); ?></span>
+        <span class="sr-only"> <!-- <?php echo $this->Html->link('Dashboads',array('controller'=>'dashboards','action'=>'admin_index'),array('escape'=>false)); ?> --></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>

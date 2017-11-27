@@ -11,6 +11,7 @@
         '../template_admin/vendor/datatables/js/jquery.dataTables.min.js',
         '../template_admin/vendor/datatables-plugins/dataTables.bootstrap.min.js',
         '../template_admin/vendor/datatables-responsive/dataTables.responsive.js',
+        
     ));
 ?>
 <!-- Page-Level Demo Scripts - Tables - Use for reference -->

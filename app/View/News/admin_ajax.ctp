@@ -11,7 +11,7 @@
         '../template_admin/vendor/datatables/js/jquery.dataTables.min.js',
         '../template_admin/vendor/datatables-plugins/dataTables.bootstrap.min.js',
         '../template_admin/vendor/datatables-responsive/dataTables.responsive.js',
-        'jquery.js'
+        'find.js'
     ));
 ?>
 <!-- Page-Level Demo Scripts - Tables - Use for reference -->
@@ -36,8 +36,12 @@ $(document).ready(function() {
             <!-- /.row -->
                 <p class="pull-right">
                     <?php  echo $this->Form->input('link', array('label' => false, "class" => "form-control input-medium", "placeholder" => __('Tìm tên bài viết')));?>
+                     <div class="content">
+           
+        </div>
             <!-- /.row -->
         </div>
+        
         <!-- /#page-wrapper -->
 
     </div>
