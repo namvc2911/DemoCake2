@@ -9,10 +9,7 @@
 			)
 
 		);
-		public $actsAs = array(
-       'Translate' => array(
-            'title', 'content'
-        )
+		
     );
 		// $this->News->locale  =  'en' ; 
 		// $results  =  $this ->Post ->find ( 'first' ,  array ( 
