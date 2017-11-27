@@ -28,7 +28,7 @@
 /**
  * ...and connect the rest of 'Pages' controller's URLs.
  */
-	Router::connect('/pages/*', array('controller' => 'users', 'action' => 'login'));
+	Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
 	Router::connect(
         '/the-loai/:id-:slug.html/*',
         array('controller' => 'pages', 'action' => 'view_genre'),
