@@ -11,6 +11,7 @@
         '../template_admin/vendor/datatables/js/jquery.dataTables.min.js',
         '../template_admin/vendor/datatables-plugins/dataTables.bootstrap.min.js',
         '../template_admin/vendor/datatables-responsive/dataTables.responsive.js',
+        'find2.js'
         
     ));
 ?>
@@ -42,7 +43,7 @@ $(document).ready(function() {
                         </div>
                         <!-- /.panel-heading -->
                         </p>
-                        
+                     
                         <div class="panel-body">
                             <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>
@@ -76,6 +77,7 @@ $(document).ready(function() {
                                             ?>
                                             <?php echo $this->Html->link('Ajax',array('controller'=>'news','action'=>'ajax',$val['News']['id']), array('class' => 'btn btn-info'));
                                             ?>
+                                            
                                         </td>
                                     </tr>
                                     <?php }?>

@@ -108,3 +108,9 @@ CakeLog::config('error', array(
 	'file' => 'error',
 ));
 CakePlugin::load('Migrations');
+CakePlugin::load('utils');
+Configure::write('Supported.Languages', array(
+    'vi'=>'VietNam',
+    'eng'=>'English',	
+));
+CakePlugin::load('Utils', array('bootstrap' => false, 'routes' => false));

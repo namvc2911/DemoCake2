@@ -19,10 +19,9 @@ class NewsController extends AppController
             'recursive' => -1
         ));
 
-
-
-    
         $this->set('data', $data);
+
+
         
     }
    public function admin_delete($id = null){
@@ -85,6 +84,9 @@ class NewsController extends AppController
         }
     }
     public function admin_review($id = null){
+        // $this->News->bindTranslation(array('News.title' => 'titleTranslation'));
+        // $this->News->bindTranslation(array('News.content' => 'titleTranslation'));
+
         $this->set('title_for_layout', 'Review');
         $detail = $this->News->find('first', array(
             
@@ -104,16 +106,23 @@ class NewsController extends AppController
 
         $this->set('detail', $detail);
         $this->set('title_for_layout', 'News');
-          $data = $this->News->find('all', array(
-            'conditions' => array(
-                'id > 0'
-            ),
-            'recursive' => -1
-        ));
+          $data2 = $this->News->find('all',array(
+            'oder'=>array('create_at'=>'desc'),
+
+            'limit'=>'10'));
 
 
     
-        $this->set('data', $data);
+        $this->set('data2', $data2);
+         $data3 = $this->News->find('all',array(
+           'oder'=>array('create_at'=>'asc'),
+
+            'limit'=>'10'));
+
+
+    
+        $this->set('data2', $data2);
+
 
 
     }

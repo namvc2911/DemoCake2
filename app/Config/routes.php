@@ -34,7 +34,7 @@
         array('controller' => 'pages', 'action' => 'view_genre'),
         array(
             'pass' => array('id', 'slug'),
-            "id"=>"[0-9]+", // chỉ là số,
+            "id"=>"[0-9]+", // chỉ là số,,
         )
     );
     //chi tiết bài viết
@@ -44,7 +44,8 @@
         array(
             'pass' => array('slug', 'id'),
             "id"=>"[0-9]+", // chỉ là số
-        )
+        ),
+         array('lang' => '[a-z-]{2}')
     );
 	//Page admin
 	Router::connect('/admin', array('controller' => 'users', 'action' => 'login', 'admin' => true));

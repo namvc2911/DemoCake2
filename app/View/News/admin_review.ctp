@@ -3,7 +3,11 @@
 
             <!-- Blog Post Content Column -->
             <div class="col-lg-9">
-
+                <?php
+                echo $this->Html->link('English', array('language'=>'eng')); 
+                echo "&nbsp;";
+                echo $this->Html->link('VietNam', array('language'=>'vi')); 
+                ?>
                 <!-- Blog Post -->
 
                 <!-- Title -->
@@ -27,14 +31,7 @@
                 <!-- Post Content -->
                 <p class="lead"><?php echo $detail['News']['content'] ?></p>
                 
-                <p>
-                    
-                <?php foreach($data as $item){
-                    echo "<br/>";
-                    echo $item['News']['title'];
-
-                } ?>
-            </p>
+              
                 <hr>
 
                 <!-- Blog Comments -->
@@ -60,7 +57,63 @@
             </div>
 
             <!-- Blog Sidebar Widgets Column -->
-            
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><b>Danh sách Bài viết + Username</b></div>
+                     <div class="panel-body">
+                        <?php foreach($data2 as $item) {?>
+                         <div class="row" style="margin-top: 10px;">
+                            <div class="col-md-5">
+                                <a href="detail.html">
+                                    <img class="img-responsive" src="image/320x150.png" alt="">
+                                </a>
+                            </div>
+                            <div class="col-md-7">
+                                <a href="#"><b><?php echo $item['User']['username'] ;?></b></a>
+                            </div>
+                            <p><?php  echo $item['News']['title'];?></p>
+                            <!-- <p><?php  echo $item['News']['create_at'];?></p> -->
+                            <div class="break"></div>
+                        </div>
+                        <?php } ?>
+
+                     </div>
+
+
+
+
+
+                </div>
+
+            </div>
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><b>Danh sách Bài viết + Username truy cập cuối cùng</b></div>
+                     <div class="panel-body">
+                        <?php foreach($data3 as $item) {?>
+                         <div class="row" style="margin-top: 10px;">
+                            <div class="col-md-5">
+                                <a href="detail.html">
+                                    <img class="img-responsive" src="image/320x150.png" alt="">
+                                </a>
+                            </div>
+                            <div class="col-md-7">
+                                <p><b><?php echo $item['User']['username'] ;?></b></p>
+                            </div>
+                            <p><?php  echo $item['News']['title'];?></p>
+                            <div class="break"></div>
+                        </div>
+                        <?php } ?>
+
+                     </div>
+
+
+
+
+
+                </div>
+
+            </div>
 
         </div>
         <!-- /.row -->
