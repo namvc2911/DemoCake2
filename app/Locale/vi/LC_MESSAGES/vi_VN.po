@@ -12,3 +12,7 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "Language: vi_VN\n"
+
+#: View/News/admin_review.ctp:18
+msgid "by"
+msgstr "bởi"

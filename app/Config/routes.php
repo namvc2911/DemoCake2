@@ -29,20 +29,13 @@
  * ...and connect the rest of 'Pages' controller's URLs.
  */
 	Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
-	Router::connect(
-        '/the-loai/:id-:slug.html/*',
-        array('controller' => 'pages', 'action' => 'view_genre'),
-        array(
-            'pass' => array('id', 'slug'),
-            "id"=>"[0-9]+", // chỉ là số,,
-        )
-    );
+	
     //chi tiết bài viết
     Router::connect(
-        '/chi-tiet/:slug-:id.html',
-        array('controller' => 'pages', 'action' => 'detail_news'),
+        '/review/:slug-:title.html',
+        array('controller' => 'news', 'action' => 'review'),
         array(
-            'id'   => '[0-9]+',
+                    'id'   => '[0-9]+',
                     'slug' => '[A-Za-z0-9\._-]+',
                     'pass' => array('id', 'slug')
         ),
