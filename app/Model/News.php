@@ -10,7 +10,13 @@
 
 		);
 		
-    
+      public $actsAs = array(
+        'Utils.Sluggable' => array(
+            'label' => 'title',
+            'method' => 'multibyteSlug',
+            'separator' => '-'
+        )
+    );
 		// $this->News->locale  =  'en' ; 
 		// $results  =  $this ->Post ->find ( 'first' ,  array ( 
   //   	'conditions'  =>  mảng ( 'News.id'  => $id ) 

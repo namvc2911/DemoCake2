@@ -42,8 +42,9 @@
         '/chi-tiet/:slug-:id.html',
         array('controller' => 'pages', 'action' => 'detail_news'),
         array(
-            'pass' => array('slug', 'id'),
-            "id"=>"[0-9]+", // chỉ là số
+            'id'   => '[0-9]+',
+                    'slug' => '[A-Za-z0-9\._-]+',
+                    'pass' => array('id', 'slug')
         ),
          array('lang' => '[a-z-]{2}')
     );
