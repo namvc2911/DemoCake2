@@ -4668,3 +4668,43 @@ Request URL: /DemoCake/template_admin/vendor/images/sort_asc.png
 Stack Trace:
 #0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2017-11-29 08:13:41 Error: [MissingActionException] Action LanguagesController::admin_eng() could not be found.
+Exception Attributes: array (
+  'controller' => 'LanguagesController',
+  'action' => 'admin_eng',
+)
+Request URL: /DemoCake/admin/languages/eng
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\DemoCake\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(LanguagesController), Object(CakeRequest), Object(CakeResponse))
+#2 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-11-29 08:14:05 Error: [MissingActionException] Action LanguagesController::admin_eng() could not be found.
+Exception Attributes: array (
+  'controller' => 'LanguagesController',
+  'action' => 'admin_eng',
+)
+Request URL: /DemoCake/admin/languages/eng
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\DemoCake\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(LanguagesController), Object(CakeRequest), Object(CakeResponse))
+#2 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-11-29 08:18:03 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_both.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 08:18:03 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_asc.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
