@@ -10,7 +10,7 @@
 
 		);
 		
-    );
+    
 		// $this->News->locale  =  'en' ; 
 		// $results  =  $this ->Post ->find ( 'first' ,  array ( 
   //   	'conditions'  =>  mảng ( 'News.id'  => $id ) 
