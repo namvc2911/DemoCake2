@@ -121,7 +121,7 @@ class NewsController extends AppController
 
 
     
-        $this->set('data2', $data2);
+        $this->set('data3', $data3);
 
 
 

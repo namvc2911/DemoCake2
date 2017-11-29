@@ -260,11 +260,7 @@
                             <!--Or-->
                             <!--<a href="/admin/users/add">Add</a>-->
                         </li>
-                        <li>
-                            <?php echo $this->Html->link('SearchAjax',array('controller'=>'news','action'=>'ajax'),array('escape'=>false))?>
-                            <!--Or-->
-                            <!--<a href="/admin/users/add">Add</a>-->
-                        </li>
+                        
                     </ul>
                     <!-- /.nav-second-level -->
                 </li>
