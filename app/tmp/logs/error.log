@@ -5237,3 +5237,461 @@ Stack Trace:
 #3 D:\xampp\htdocs\DemoCake\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(NewsController), Object(CakeRequest), Object(CakeResponse))
 #4 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+2017-11-29 09:46:17 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_both.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 09:46:17 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_asc.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 09:46:18 Error: [MissingActionException] Action NewsController::admin_image() could not be found.
+Exception Attributes: array (
+  'controller' => 'NewsController',
+  'action' => 'admin_image',
+)
+Request URL: /DemoCake/admin/news/image/320x150.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\DemoCake\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(NewsController), Object(CakeRequest), Object(CakeResponse))
+#2 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-11-29 09:46:21 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_both.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 09:46:21 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_asc.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 09:46:23 Error: [MissingActionException] Action NewsController::admin_image() could not be found.
+Exception Attributes: array (
+  'controller' => 'NewsController',
+  'action' => 'admin_image',
+)
+Request URL: /DemoCake/admin/news/image/320x150.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\DemoCake\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(NewsController), Object(CakeRequest), Object(CakeResponse))
+#2 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-11-29 09:46:56 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_both.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 09:46:56 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_asc.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 09:46:57 Error: [MissingActionException] Action NewsController::admin_image() could not be found.
+Exception Attributes: array (
+  'controller' => 'NewsController',
+  'action' => 'admin_image',
+)
+Request URL: /DemoCake/admin/news/image/320x150.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\DemoCake\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(NewsController), Object(CakeRequest), Object(CakeResponse))
+#2 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-11-29 09:47:43 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_both.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 09:47:43 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_asc.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 09:47:45 Error: [MissingActionException] Action NewsController::admin_image() could not be found.
+Exception Attributes: array (
+  'controller' => 'NewsController',
+  'action' => 'admin_image',
+)
+Request URL: /DemoCake/admin/news/image/320x150.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\DemoCake\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(NewsController), Object(CakeRequest), Object(CakeResponse))
+#2 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-11-29 09:47:49 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_both.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 09:47:49 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_asc.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 09:48:11 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_both.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 09:48:11 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_asc.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 09:48:14 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_both.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 09:48:14 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_asc.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 09:48:17 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_both.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 09:48:17 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_asc.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 09:52:18 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_both.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 09:52:18 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_asc.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 09:52:20 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_both.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 09:52:20 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_asc.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 09:52:36 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_both.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 09:52:36 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_asc.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 09:52:55 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_both.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 09:52:55 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_asc.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 09:53:34 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_both.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 09:53:34 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_asc.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 09:54:04 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_both.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 09:54:04 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_asc.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 10:12:17 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_both.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 10:12:17 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_asc.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 10:12:19 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_both.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 10:12:19 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_asc.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 10:12:39 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_both.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 10:12:39 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_asc.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 10:12:54 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_both.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 10:12:54 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_asc.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 10:12:56 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_both.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 10:12:56 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_asc.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 10:19:58 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_both.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 10:19:59 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_asc.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 10:20:00 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_both.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 10:20:00 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_asc.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 10:20:59 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_both.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 10:20:59 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_asc.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 10:21:00 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_both.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-29 10:21:00 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_asc.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

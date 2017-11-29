@@ -17,7 +17,6 @@
                             </div>
                         </fieldset>
                     <?php echo $this->Form->button('Login',array('class'=>'btn btn-success'));?>
-                    <?php echo $this->Form->button('Register',array('class'=>'btn btn-success'));?>
 
                 </div>
             </div>

@@ -68,7 +68,7 @@ $(document).ready(function() {
                                         <!-- <td width="200px"><?php echo $val['News']['image']?></td> -->
                                         <td><?php echo $val['News']['create_at']?></td>
                                         <td>
-                                            <?php echo $this->Html->link('Review',array('controller'=>'news','action'=>'review',$val['News']['slug']), array('class' => 'btn btn-primary'));
+                                            <?php echo $this->Html->link('Review',array('controller'=>'news','action'=>'review',$val['News']['id']), array('class' => 'btn btn-primary'));
                                             ?>
 
                                             <?php echo $this->Html->link('Edit',array('controller'=>'news','action'=>'edit',$val['News']['id']), array('class' => 'btn btn-warning'));

@@ -12,6 +12,7 @@ class NewsController extends AppController
     public function admin_list()
     {
         $this->set('title_for_layout', 'News');
+            
          $data = $this->News->find('all', array(
             'conditions' => array(
                 'id > 0'
@@ -88,6 +89,8 @@ class NewsController extends AppController
         // $this->News->bindTranslation(array('News.content' => 'titleTranslation'));
 
         $this->set('title_for_layout', 'Review');
+
+
         $detail = $this->News->find('first', array(
             
             'conditions'=>array('News.id'=>$id),
