@@ -114,3 +114,4 @@ Configure::write('Supported.Languages', array(
     'eng'=>'English',	
 ));
 CakePlugin::load('Utils', array('bootstrap' => false, 'routes' => false));
+CakePlugin::load('Facebook', array('bootstrap' => false, 'routes' => false));

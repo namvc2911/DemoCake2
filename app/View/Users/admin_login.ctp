@@ -1,3 +1,5 @@
+     <?php echo $this->Html->script('facebook') ?>
+
 <div class="container">
     <div class="row">
         <div class="col-md-4 col-md-offset-4">
@@ -5,6 +7,7 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">Please Sign In</h3>
                 </div>
+
                 <div class="panel-body">
                     <?php echo $this->Session->flash();?>
                     <?php echo $this->Form->create();?>
@@ -16,8 +19,10 @@
                                 <?php echo $this->Form->input('password', array('type'=>'password',"class"=>"form-control", "placeholder"=>"Password"));?>
                             </div>
                         </fieldset>
-                    <?php echo $this->Form->button('Login',array('class'=>'btn btn-success'));?>
-
+                    <?php echo $this->Form->button('Login',array('class'=>'btn btn-success'));
+                            
+                    ?>
+                    <a href="#" class="facebookConector">Đăng nhập facebook</a>
                 </div>
             </div>
         </div>

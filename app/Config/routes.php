@@ -39,14 +39,14 @@
     );
     //chi tiết bài viết
     Router::connect(
-        '/review/:slug-:title.html',
-        array('controller' => 'News', 'action' => 'review'),
+        'news/', // E.g. /blog/3-CakePHP_Rocks
+        array('controller' => 'news', 'action' => 'review'),
         array(
-                    'id'   => '[0-9]+',
-                    'slug' => '[A-Za-z0-9\._-]+',
-                    'pass' => array('id', 'slug')
-        ),
-         array('lang' => '[a-z-]{2}')
+            // order matters since this will simply map ":id" to
+            // $articleId in your action
+            'pass' => array('id', 'slug'),
+            'id' => '[0-9]+'
+        )
     );
 	//Page admin
 	Router::connect('/admin', array('controller' => 'users', 'action' => 'login', 'admin' => true));

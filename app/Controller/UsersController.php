@@ -3,6 +3,7 @@ class UsersController extends AppController
 {
     var $uses = array('User');
     var $layout = "admin";
+    
     public function beforeFilter()
     {
         parent::beforeFilter();

@@ -12,7 +12,6 @@ class NewsController extends AppController
     public function admin_list()
     {
         $this->set('title_for_layout', 'News');
-            
          $data = $this->News->find('all', array(
             'conditions' => array(
                 'id > 0'
@@ -84,16 +83,15 @@ class NewsController extends AppController
             }
         }
     }
-    public function admin_review($id = null){
+    public function admin_review($slug = null){
         // $this->News->bindTranslation(array('News.title' => 'titleTranslation'));
         // $this->News->bindTranslation(array('News.content' => 'titleTranslation'));
 
+       
         $this->set('title_for_layout', 'Review');
-
-
         $detail = $this->News->find('first', array(
             
-            'conditions'=>array('News.id'=>$id),
+            'conditions'=>array('News.slug'=>$slug),
         ));
         //$detail =  $this->News->find('first',array('conditions'=>array('News.id'=>$id)));
         if(empty($detail['News']['view'])){
@@ -101,7 +99,7 @@ class NewsController extends AppController
         }
         $view = $detail['News']['view'];
         $view = $view + 1;
-        $this->News->id = $id;
+        $this->News->slug = $slug;
         $data['News']['view'] = $view;
         if ($this->News->save($data)) {
           
@@ -125,6 +123,8 @@ class NewsController extends AppController
 
     
         $this->set('data3', $data3);
+
+
 
 
 

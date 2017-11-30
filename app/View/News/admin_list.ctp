@@ -65,18 +65,27 @@ $(document).ready(function() {
 
                                         <td ><?php echo $val['News']['title']?></td>
                                         <td ><?php echo $val['News']['content']?></td>
-                                        <!-- <td width="200px"><?php echo $val['News']['image']?></td> -->
+                                       
                                         <td><?php echo $val['News']['create_at']?></td>
                                         <td>
-                                            <?php echo $this->Html->link('Review',array('controller'=>'news','action'=>'review',$val['News']['id']), array('class' => 'btn btn-primary'));
+                                         <!--    <?php 
+                                                echo $this->Html->link('Review', array(
+                                                    'controller' => 'news',
+                                                    'action' => 'review',
+                                                   $val['News']['slug']
+                                                    ,array('class'=>'btn btn-primary')
+                                                ));
+                                            ?> -->
+                                            <?php echo $this->Html->link('Review',array('controller'=>'news','action'=>'review',$val['News']['slug']), array('class' => 'btn btn-primary'));
+
+
+                                                echo $this->Html->link('Edit',array('controller'=>'news','action'=>'edit',$val['News']['id']), array('class' => 'btn btn-warning'));
+
+                                                echo $this->Html->link('Del',array('controller'=>'news','action'=>'delete',$val['News']['id']), array('class' => 'btn btn-danger'));
+                                                echo $this->Html->link('Ajax',array('controller'=>'news','action'=>'ajax',$val['News']['id']), array('class' => 'btn btn-info'));
                                             ?>
 
-                                            <?php echo $this->Html->link('Edit',array('controller'=>'news','action'=>'edit',$val['News']['id']), array('class' => 'btn btn-warning'));
-                                            ?>
-                                            <?php echo $this->Html->link('Del',array('controller'=>'news','action'=>'delete',$val['News']['id']), array('class' => 'btn btn-danger'));
-                                            ?>
-                                            <?php echo $this->Html->link('Ajax',array('controller'=>'news','action'=>'ajax',$val['News']['id']), array('class' => 'btn btn-info'));
-                                            ?>
+                                           
                                             
                                         </td>
                                     </tr>
