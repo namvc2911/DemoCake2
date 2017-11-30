@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">Users
-                    <button onclick="window.location.href='/admin/users/index'" style="float: right;" type="button" class="btn btn-primary">Danh sách</button>
+                   
                     </h1>
                     <?php echo $this->Session->flash();?>
                 </div>
@@ -43,7 +43,7 @@
                                             <?php echo $this->Form->input('email', array('class'=>'form-control')); ?>
                                         </div>
                                         <button id="linkUpdate" type="submit" class="btn btn-success">Save</button>
-                                        <button type="button" onclick="window.location.href='/admin/users/list'" class="btn btn-info">Danh sách</button>
+                                        
                                     <?php echo $this->Form->end();?>
                                 </div>
                             </div>

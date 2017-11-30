@@ -33,6 +33,13 @@ $(document).ready(function() {
                     <?php echo $this->Session->flash();?>
                 </div>
                 <!-- /.col-lg-12 -->
+                <?php echo "Danh sách người  dùng: "; 
+                    foreach($users as $user){
+                        echo "<br/>";
+                        echo $user['User']['username'];
+                    }
+
+                    ?>
             </div>
             <!-- /.row -->
            <div class="row">
@@ -82,7 +89,7 @@ $(document).ready(function() {
                                                 echo $this->Html->link('Edit',array('controller'=>'news','action'=>'edit',$val['News']['id']), array('class' => 'btn btn-warning'));
 
                                                 echo $this->Html->link('Del',array('controller'=>'news','action'=>'delete',$val['News']['id']), array('class' => 'btn btn-danger'));
-                                                echo $this->Html->link('Ajax',array('controller'=>'news','action'=>'ajax',$val['News']['id']), array('class' => 'btn btn-info'));
+                                               
                                             ?>
 
                                            

@@ -24,6 +24,7 @@
  * its action called 'display', and we pass a param to select the view file
  * to use (in this case, /app/View/Pages/home.ctp)...
  */
+
 	Router::connect('/', array('controller' => 'users', 'action' => 'login','admin'=>true));
 /**
  * ...and connect the rest of 'Pages' controller's URLs.
@@ -51,6 +52,10 @@
 	//Page admin
 	Router::connect('/admin', array('controller' => 'users', 'action' => 'login', 'admin' => true));
 
+
+    Router::connect('/:language/:controller',
+                  array('action' => 'review'),
+                  array('language' => 'eng|vi'));  
     // Router::paserExtensions();
     // Router::setExtensions(array('json','xml','csv','rss','pdf'));
 

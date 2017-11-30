@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">Bài Viết
-                    <button onclick="window.location.href='/admin/categories/list'" style="float: right;" type="button" class="btn btn-primary">List</button>
+                    <button onclick="window.location.href='#'" style="float: right;" type="button" class="btn btn-primary">List</button>
                     </h1>
                     <?php echo $this->Session->flash();?>
                 </div>

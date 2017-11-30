@@ -21,6 +21,9 @@ class NewsController extends AppController
 
         $this->set('data', $data);
 
+        $this->loadModel('User');
+        $this->set('users', $this->User->find('all'));
+
 
         
     }
@@ -84,75 +87,61 @@ class NewsController extends AppController
         }
     }
     public function admin_review($slug = null){
-        // $this->News->bindTranslation(array('News.title' => 'titleTranslation'));
-        // $this->News->bindTranslation(array('News.content' => 'titleTranslation'));
+        
+      
 
-       
-        $this->set('title_for_layout', 'Review');
-        $detail = $this->News->find('first', array(
+        $counter    = $this->News->updateAll(
+        array('News.view' => 'News.view + 1'),
+        array('News.slug' => $slug)
+        );
+        
+         
+     
+
+             $detail = $this->News->find('first', array(
             
             'conditions'=>array('News.slug'=>$slug),
         ));
-        //$detail =  $this->News->find('first',array('conditions'=>array('News.id'=>$id)));
-        if(empty($detail['News']['view'])){
-            $detail['News']['view'] = 0;
-        }
-        $view = $detail['News']['view'];
-        $view = $view + 1;
-        $this->News->slug = $slug;
-        $data['News']['view'] = $view;
-        if ($this->News->save($data)) {
-          
-        }
+       
+    
 
-        $this->set('detail', $detail);
         $this->set('title_for_layout', 'News');
           $data2 = $this->News->find('all',array(
-            'oder'=>array('create_at'=>'desc'),
+            'oder'=>array('News.create_at desc'),
 
             'limit'=>'10'));
 
 
     
         $this->set('data2', $data2);
-         $data3 = $this->News->find('all',array(
-           'oder'=>array('create_at'=>'asc'),
+        $this->loadModel('User');
+        $this->set('users', $this->User->find('all'));
 
-            'limit'=>'10'));
-
-
-    
-        $this->set('data3', $data3);
-
-
-
+        $this->set(compact('counter', 'detail', 'data2', 'slug'));
 
 
     }
     public function admin_ajax(){
-        if($this->request->is('post')){
-            $this->set('title_for_layout', 'News');
-            $data = $this->News->find('all', array(
-            'conditions' => array(
-                'News.title Like'=>'%'. $this->request->data['keyword'] . '%',
-            ),
-            'recursive' => -1
-            ));
-            $this->set('data',$data);
-        }
+        
+        
     }
     public function admin_findajax(){
+        
          if($this->request->is('post')){
+            $data = array();
             $this->set('title_for_layout', 'News');
-            $data = $this->News->find('all', array(
-            'conditions' => array(
-                'News.title Like'=>'%'. $this->request->data['keyword'] . '%',
-            ),
-            'recursive' => -1
-            ));
+            if ($this->request->data['keyword'] != '') {
+                 $data = $this->News->find('all', array(
+                    'conditions' => array(
+                        'News.title Like'=>'%'. $this->request->data['keyword'] . '%',
+                    ),
+                    'recursive' => -1
+                ));
+            }  
             $this->set('data',$data);
         }
     }
+    
 }
 
 ?>

@@ -22,6 +22,7 @@
                     <?php echo $this->Form->button('Login',array('class'=>'btn btn-success'));
                             
                     ?>
+                     <?php echo $this->Html->link('register', array('controller'=>'users','action'=>'add'),array('escape'=>false))?>
                     <a href="#" class="facebookConector">Đăng nhập facebook</a>
                 </div>
             </div>

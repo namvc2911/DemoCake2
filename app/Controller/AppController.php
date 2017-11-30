@@ -35,6 +35,7 @@ class AppController extends Controller {
 	public $components = array(
 		'Data',
 		'Session',
+		'Cookie',
 		'Auth'=>array(
 			'authenticate' => array(
 				'Blowfish' => array(
@@ -57,6 +58,5 @@ class AppController extends Controller {
             $this->Auth->allow();
         }
 		$this->set('current_user', $this->Auth->user());
-		
 	}
 }

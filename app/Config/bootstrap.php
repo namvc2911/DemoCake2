@@ -109,9 +109,5 @@ CakeLog::config('error', array(
 ));
 CakePlugin::load('Migrations');
 CakePlugin::load('utils');
-Configure::write('Supported.Languages', array(
-    'vi'=>'VietNam',
-    'eng'=>'English',	
-));
+Configure::write('Config.language', 'eng');
 CakePlugin::load('Utils', array('bootstrap' => false, 'routes' => false));
-CakePlugin::load('Facebook', array('bootstrap' => false, 'routes' => false));

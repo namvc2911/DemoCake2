@@ -1,12 +1,12 @@
 <?php
-class Demo extends CakeMigration {
+class Hello extends CakeMigration {
 
 /**
  * Migration description
  *
  * @var string
  */
-	public $description = 'demo';
+	public $description = 'hello';
 
 /**
  * Actions to be performed
@@ -15,16 +15,8 @@ class Demo extends CakeMigration {
  */
 	public $migration = array(
 		'up' => array(
-			'create_field' => array(
-				'news' => array(
-					'slug' => array('type' => 'string', 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'charset' => 'utf8', 'after' => 'image'),
-				),
-			),
 		),
 		'down' => array(
-			'drop_field' => array(
-				'news' => array('slug'),
-			),
 		),
 	);
 

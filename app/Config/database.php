@@ -61,7 +61,7 @@ class DATABASE_CONFIG {
 		'host' => 'localhost',
 		'login' => 'root',
 		'password' => '',
-		'database' => 'dbbanhang',
+		'database' => 'cake',
 		'prefix' => '',
 		'encoding' => 'utf8',
 	);

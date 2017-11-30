@@ -82,7 +82,7 @@
 /**
  * Application wide charset encoding
  */
-	Configure::write('App.encoding', 'UTF-8');
+	Configure::write('Config.language', 'eng');
 
 /**
  * To configure CakePHP *not* to use mod_rewrite and to
@@ -150,6 +150,7 @@
  */
 	//Configure::write('Cache.viewPrefix', 'prefix');
 	Configure::write('Routing.prefixes', array('admin'));
+	
 	
 /**
  * Session configuration.

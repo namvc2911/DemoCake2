@@ -1,5 +1,6 @@
 <?php
-class Demo extends CakeMigration {
+class Demo extends CakeMigration 
+{
 
 /**
  * Migration description
@@ -14,15 +15,6 @@ class Demo extends CakeMigration {
  * @var array $migration
  */
 	public $migration = array(
-		'up' => array(
-			'drop_field' => array(
-				'news' => array('noibat', 'indexes' => array('PRIMARY', 'fk_user_news')),
-				'users' => array('indexes' => array('PRIMARY', 'id')),
-			),
-			'drop_table' => array(
-				'i18n'
-			),
-		),
 		'down' => array(
 			'create_field' => array(
 				'news' => array(
@@ -77,6 +69,19 @@ class Demo extends CakeMigration {
  * @return bool Should process continue
  */
 	public function after($direction) {
+		$News = ClassRegistry::init('News');
+        if ($direction === 'up') {
+            for ($i = 1; $i <= 500; $i++) {
+                $row = array();
+                $row['News']['title'] = 'The Best Tests for WordPress';
+                $row['News']['content'] = 'If you have a plugin or widget that lists popular posts or comments, make sure that this sticky post is not always at the top of those lists unless it really is popular.';
+                $News->create();
+                $News->save($row);
+			}
+		}
+		elseif ($direction === 'down') {
+		}
+		
 		return true;
 	}
 }
