@@ -5,10 +5,11 @@ class UsersController extends AppController
     var $layout = "admin";
     
     public function beforeFilter()
-    {   
+    {
         
         parent::beforeFilter();
-        $this->Auth->allow('admin_add');
+        $this->Auth->allow(array('admin_facebook','admin_list','admin_google','admin_add'));
+        
     }
     public function admin_login()
     {
@@ -19,20 +20,24 @@ class UsersController extends AppController
                 $this->Session->setFlash('Username hoặc pass sai');
             }
         }
+        
     }
     public function admin_logout()
     {
         $this->redirect($this->Auth->logout());
         $this->redirect(array(
-                    'action' => 'login'
-                ));
+            'action' => 'login'
+        ));
     }
+    
     public function admin_list()
     {
         //Lay du lieu trong table users
         $array_user = $this->User->find('all', array(
-            'conditions'=>array('id > 0'),
-            'recursive'   =>-1
+            'conditions' => array(
+                'id > 0'
+            ),
+            'recursive' => -1
         ));
         //đưa dữ liệu lấy được qua view bằng biến users
         $this->set('users', $array_user);
@@ -95,16 +100,75 @@ class UsersController extends AppController
                 'date_updated' => $now
             ));
             if ($this->User->save($this->request->data)) {
-                $this->Session->setFlash('Success', 'default', array(
-                    'class' => "alert alert-success"
-                ));
-                $this->redirect(array(
+              
+                $this->redirect(array('controller'=>'users',
                     'action' => 'list'
                 ));
             }
+            
+            
+            //nếu request ajax
+            
         }
     }
+    public function admin_facebook()
+    {
+      
+      if($this->request->is('post') || $this->request->is('put')){
+            $now = date('Y:m:d H:i:s');
+            $info = $this->request->data;
+
+            $this->User->set(array(
+            'name'=>$info['name'],
+            'email'=>$info['email'],
+            
+            'facebook_id'=>$info['id'],
+            'date_created'=>$now,
+            'date_updated'=>$now
+
+        ));
+        if($this->User->save($this->request->data)){
+            $this->Session->setFlash('Success', 'default', array(
+                    'class' => "alert alert-success"
+                ));
+             $this->redirect(array(
+                    'action' => 'list'
+                ));
+              
+        }
+      }
+      
+        
+    }
+    public function admin_google(){
+        if($this->request->is('post')|| $this->request->is('put')){
+              $now = date('Y:m:d H:i:s');
+            $info = $this->request->data;
+            debug($info);die;
+            $this->User->set(array(
+                'name'=>$info['ig'],
+                'email'=>$info['U3'],
+                'id'   =>$info['Eea'],
+                 'date_created'=>$now,
+                'date_updated'=>$now
+            ));
+
+            if($this->User->save()){
+                $this->Session->setFlash('Success', 'default', array(
+                    'class' => "alert alert-success"
+                ));
+             $this->redirect(array(
+                    'action' => 'list'
+                ));
+
+            }
+
+        }
+
     
+            
+
+    }   
     
 }
 

@@ -18,7 +18,7 @@ class NewsController extends AppController
             ),
             'recursive' => -1
         ));
-        
+      
         $this->set('data', $data);
         
         $this->loadModel('User');

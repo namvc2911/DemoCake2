@@ -11,9 +11,12 @@ class User extends AppModel {
         
     public $validate = array(
             'username' =>array(
+           
+
                 'too long'=>array(
                     'rule' => array('between', 5, 32),
-                    'message' => 'Username phải lớn 5 ký tự'
+                    'message' => 'Username phải lớn 5 ký tự',
+
                 ),
                 'not empty' => array(
                     'rule' => 'notEmpty',
@@ -22,9 +25,10 @@ class User extends AppModel {
                 'duplicate username' => array(
                     'rule'=>'isUnique',
                     'message' => 'Username này đã có người dùng'
-                )
+                ),
             ),
             'password' => array(
+             
                 'too long' => array(
                     'rule' => array('between', 6, 32),
                     'message' => 'Mật khẩu phải từ 6 ký tự đến 32 ký tự'
@@ -36,9 +40,11 @@ class User extends AppModel {
                 'Match Password' => array(
                     'rule' => 'matchPasswords',
                     'message' => 'Không trùng khớp mật khẩu'
-                )
+                ),
             ),
             'confirm_password' => array(
+                
+
                 'too long' => array(
                     'rule' => array('between', 6, 32),
                     'message' => 'Nhập 6 - 32 ký tự'
@@ -46,7 +52,8 @@ class User extends AppModel {
                 'not empty' => array(
                     'rule' => 'notEmpty',
                     'message' => 'Vui lòng xác nhận mật khẩu'
-                )
+                ),
+
             ),
             'currentpassword' => array(
                 'too long' => array(

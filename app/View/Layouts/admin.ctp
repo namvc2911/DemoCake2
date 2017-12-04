@@ -6,7 +6,8 @@
 <body>
 
 	<?php echo $this->fetch('content');?>
-
-</body>
+	<div id="fb-root"></div>
+	<div id="my-signin2"></div>	
+</body>	
 
 </html>

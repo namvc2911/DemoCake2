@@ -22,6 +22,7 @@ $(document).ready(function() {
 });
 </script>
 <div id="wrapper">
+    
         <!-- Navigation -->
         <?php echo $this->element('admin/navigate');?>
         <div id="page-wrapper">

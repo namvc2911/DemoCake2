@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <meta name="google-signin-client_id" content="117942054522-k73mafkm3amnkleghq2prnpsictf1iut.apps.googleusercontent.com">
+    <title>Trang web demo CakePHP</title>
     <?php
         echo $this->Html->css(array(
             '../template_admin/vendor/bootstrap/css/bootstrap.min',

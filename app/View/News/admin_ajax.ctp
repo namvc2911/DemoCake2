@@ -21,13 +21,13 @@ $(document).ready(function(){
         var key = $( "#link" ).val();
         $.ajax({
             type: "POST",
-            url: '/DemoCake/admin/news/findajax',
+            url: '<?php echo $this->Html->url(array('controller'=>'news','action'=>'findajax')) ?>',
             data : {
                  keyword :key,
             },
             dataType: 'text',
             success : function (result){
-                $('.content').html(result);
+                   $('#content').html(result);
             }
         });
     });
@@ -47,7 +47,7 @@ $(document).ready(function(){
             <!-- /.row -->
                 <p class="pull-right">
                     <?php  echo $this->Form->input('link', array('label' => false, "class" => "form-control input-medium", "placeholder" => __('Tìm tên bài viết')));?>
-                     <div class="content">
+                     <div id="content">
                 
                  </div>
             <!-- /.row -->

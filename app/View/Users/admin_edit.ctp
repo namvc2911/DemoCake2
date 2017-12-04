@@ -26,7 +26,14 @@
                                             <label>Username</label>
                                             <?php echo $this->Form->input('username', array('class'=>'form-control')); ?>
                                         </div>
-
+                                        <div class="form-group">
+                                            <label>Mật khẩu</label>
+                                            <?php echo $this->Form->input('password', array('class'=>'form-control')); ?>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Nhập lại mật khẩu</label>
+                                            <?php echo $this->Form->input('confirm_password', array('type'=>'password', 'class'=>'form-control')); ?>
+                                        </div>
                                         <div class="form-group">
                                             <label>Email</label>
                                             <?php echo $this->Form->input('email', array('class'=>'form-control')); ?>

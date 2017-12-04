@@ -128,7 +128,7 @@
  *
  */
 	//Configure::write('Cache.disable', true);
-
+define('BASE_URL','http://'.$_SERVER['HTTP_HOST'].'/fb_cakephp/');
 /**
  * Enable cache checking.
  *

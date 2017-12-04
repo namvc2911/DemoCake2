@@ -1,4 +1,3 @@
-     <?php echo $this->Html->script('facebook') ?>
 
 <div class="container">
     <div class="row">
@@ -23,9 +22,92 @@
                             
                     ?>
                      <?php echo $this->Html->link('register', array('controller'=>'users','action'=>'add'),array('escape'=>false))?>
-                    <a href="#" class="facebookConector">Đăng nhập facebook</a>
+                    <fb:login-button 
+                      scope="public_profile,email"
+                      onlogin="checkLoginState();">
+                    </fb:login-button>
+                    <div class="g-signin2" data-longtitle="true" data-onsuccess="Google_signIn" data-theme="light" data-width="200"></div>
                 </div>
+
             </div>
         </div>
     </div>
 </div>
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '962138180604741',
+      cookie     : true,
+      xfbml      : true,
+      version    : '2.11'
+    });
+  };
+      (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/all.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+    function statusChangeCallback(response){
+    if(response.status === 'connected'){
+     buildApi();
+      alert('Đăng nhập thành công: ');
+    }else{
+      console.log('Error: ');
+    }
+  };
+   function checkLoginState() {
+      FB.getLoginStatus(function(response) {
+        statusChangeCallback(response);
+      });
+    }
+    function buildApi(){
+      var result = '';
+        FB.api('/me?fields=name,email', function(response){
+            $.ajax({
+            type  : 'POST',
+            url   : '<?php echo $this->Html->url(array('controller'=>'users','action'=>'facebook')) ?>',
+            data  :response,
+            success : function (result){
+              window.location.href = '<?php echo $this->Html->url(array('controller'=>'users','action'=>'list')) ?>';
+              }
+              });
+        });
+             }
+</script>
+<script type="text/javascript">
+  
+  
+  function Google_signIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId());
+  console.log('Name: ' + profile.getName());
+  console.log('Email: ' + profile.getEmail());
+  console.log(profile);
+  //pass information to server to insert or update the user record
+  update_user_data(profile);
+}
+  function update_user_data(response) 
+{
+  $result = "";
+      $.ajax({
+            type: "POST",
+           
+            data: response,
+            url: '<?php echo $this->Html->url(array('controller'=>'users','action'=>'google')) ?>',
+            success: function(result) {
+              alert('Đăng nhập thành công: ');
+               window.location.href = '<?php echo $this->Html->url(array('controller'=>'users','action'=>'list')) ?>';
+            }
+      });
+}
+function signOut() {
+   var auth2 = gapi.auth2.getAuthInstance();
+   auth2.signOut().then(function () {
+     console.log('User signed out.');
+   });
+ }
+</script>    
+<script src="https://apis.google.com/js/platform.js" async defer></script>
