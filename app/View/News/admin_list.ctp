@@ -75,6 +75,7 @@ $(document).ready(function() {
                                        
                                         <td><?php echo $val['News']['create_at']?></td>
                                         <td>
+
                                          <!--    <?php 
                                                 echo $this->Html->link('Review', array(
                                                     'controller' => 'news',
@@ -90,6 +91,16 @@ $(document).ready(function() {
 
                                                 echo $this->Html->link('Del',array('controller'=>'news','action'=>'delete',$val['News']['id']), array('class' => 'btn btn-danger'));
                                                
+=======
+                                            <?php echo $this->Html->link('Review',array('controller'=>'news','action'=>'review',$val['News']['id']), array('class' => 'btn btn-primary'));
+                                            ?>
+
+                                            <?php echo $this->Html->link('Edit',array('controller'=>'news','action'=>'edit',$val['News']['id']), array('class' => 'btn btn-warning'));
+                                            ?>
+                                            <?php echo $this->Html->link('Del',array('controller'=>'news','action'=>'delete',$val['News']['id']), array('class' => 'btn btn-danger'));
+                                            ?>
+                                            <?php echo $this->Html->link('Ajax',array('controller'=>'news','action'=>'ajax',$val['News']['id']), array('class' => 'btn btn-info'));
+
                                             ?>
 
                                            

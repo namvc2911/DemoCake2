@@ -5,7 +5,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2017-12-01 03:53+0100\n"
+=======
+"POT-Creation-Date: 2017-11-27 13:46+0100\n"
+>>>>>>> 42141388958d2e698e7876c5708bf483db294735
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -331,6 +335,7 @@ msgstr ""
 msgid "Schema file: %s generated"
 msgstr ""
 
+<<<<<<< HEAD
 #: Plugin/utils/Controller/Component/ArchiveComponent.php:156
 msgid "No %s found for that date range"
 msgstr ""
@@ -1396,6 +1401,8 @@ msgstr ""
 msgid "Connection to server lipsum.com failed. %s."
 msgstr ""
 
+=======
+>>>>>>> 42141388958d2e698e7876c5708bf483db294735
 #: View/Errors/error400.ctp:22
 #: View/Errors/error500.ctp:22
 msgid "Error"
@@ -1618,3 +1625,62 @@ msgstr ""
 msgid "Debug setting does not allow access to this url."
 msgstr ""
 
+<<<<<<< HEAD
+=======
+#: View/News/admin_ajax.ctp:38
+msgid "Tìm tên bài viết"
+msgstr ""
+
+#: Model/User.php:validation for field username
+msgid "Username phải lớn 5 ký tự"
+msgstr ""
+
+#: Model/User.php:validation for field username
+msgid "Username không được để trống"
+msgstr ""
+
+#: Model/User.php:validation for field username
+msgid "Username này đã có người dùng"
+msgstr ""
+
+#: Model/User.php:validation for field password;validation for field currentpassword
+msgid "Mật khẩu phải từ 6 ký tự đến 32 ký tự"
+msgstr ""
+
+#: Model/User.php:validation for field password
+msgid "Mật khẩu không được để trống"
+msgstr ""
+
+#: Model/User.php:validation for field password
+msgid "Không trùng khớp mật khẩu"
+msgstr ""
+
+#: Model/User.php:validation for field confirm_password
+msgid "Nhập 6 - 32 ký tự"
+msgstr ""
+
+#: Model/User.php:validation for field confirm_password
+msgid "Vui lòng xác nhận mật khẩu"
+msgstr ""
+
+#: Model/User.php:validation for field currentpassword
+msgid "Nhập mật khẩu cũ."
+msgstr ""
+
+#: Model/User.php:validation for field currentpassword
+msgid "Sai Mật khẩu."
+msgstr ""
+
+#: Model/User.php:validation for field email
+msgid "Nhập địa chỉ email hợp lệ"
+msgstr ""
+
+#: Model/User.php:validation for field email
+msgid "email đã có người sử dụng"
+msgstr ""
+
+#: Model/User.php:validation for field name
+msgid "Vui lòng nhập họ tên"
+msgstr ""
+
+>>>>>>> 42141388958d2e698e7876c5708bf483db294735

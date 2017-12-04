@@ -5,11 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-<<<<<<< HEAD
-"POT-Creation-Date: 2017-12-01 03:53+0100\n"
-=======
 "POT-Creation-Date: 2017-11-27 13:46+0100\n"
->>>>>>> 42141388958d2e698e7876c5708bf483db294735
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -18,7 +14,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: Plugin/migrations/Console/Command/MigrationShell.php:1020;1023
-msgid "Schema file: %s generated"
+#: View/Errors/error400.ctp:22
+#: View/Errors/error500.ctp:22
+msgid "Error"
+msgstr ""
+
+#: View/Errors/error400.ctp:24
+msgid "The requested address %s was not found on this server."
+msgstr ""
+
+#: View/Errors/error500.ctp:23
+msgid "An Internal Error Has Occurred."
 msgstr ""
 

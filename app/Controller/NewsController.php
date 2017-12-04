@@ -12,33 +12,40 @@ class NewsController extends AppController
     public function admin_list()
     {
         $this->set('title_for_layout', 'News');
-         $data = $this->News->find('all', array(
+        $data = $this->News->find('all', array(
             'conditions' => array(
                 'id > 0'
             ),
             'recursive' => -1
         ));
-
+        
         $this->set('data', $data);
-
+        
         $this->loadModel('User');
         $this->set('users', $this->User->find('all'));
-
-
+        
+        
         
     }
-   public function admin_delete($id = null){
-        if($this->request->is('get')){
+    public function admin_delete($id = null)
+    {
+        if ($this->request->is('get')) {
             $data = $this->News->find('first', array(
-                'conditions'=>array('id = '.$id),
-                'recursive'   =>-1
+                'conditions' => array(
+                    'id = ' . $id
+                ),
+                'recursive' => -1
             ));
-            if(!empty($data)){
+            if (!empty($data)) {
                 $this->News->delete($id);
-            
-                $this->Session->setFlash('Success','default',array('class'=>"alert alert-success"));
-            }else{
-                $this->Session->setFlash('Error','default',array('class'=>"alert alert-success"));
+                
+                $this->Session->setFlash('Success', 'default', array(
+                    'class' => "alert alert-success"
+                ));
+            } else {
+                $this->Session->setFlash('Error', 'default', array(
+                    'class' => "alert alert-success"
+                ));
             }
             $this->redirect('list');
         }
@@ -86,59 +93,54 @@ class NewsController extends AppController
             }
         }
     }
-    public function admin_review($slug = null){
-        
-      
-
-        $counter    = $this->News->updateAll(
-        array('News.view' => 'News.view + 1'),
-        array('News.slug' => $slug)
-        );
-        
-         
-     
-
-             $detail = $this->News->find('first', array(
-            
-            'conditions'=>array('News.slug'=>$slug),
+    public function admin_review($slug = null)
+    {
+       $counter = $this->News->updateAll(array(
+            'News.view' => 'News.view + 1'
+        ), array(
+            'News.slug' => $slug
         ));
-       
-    
-
+        $detail = $this->News->find('first', array(
+            
+            'conditions' => array(
+                'News.slug' => $slug
+            )
+        ));
+        
         $this->set('title_for_layout', 'News');
-          $data2 = $this->News->find('all',array(
-            'oder'=>array('News.create_at desc'),
-
-            'limit'=>'10'));
-
-
-    
-        $this->set('data2', $data2);
+        $data2 = $this->News->find('all', array(
+            'oder' => array(
+                'News.create_at desc'
+            ),
+            
+            'limit' => '10'
+        ));
+         $this->set('data2', $data2);
         $this->loadModel('User');
         $this->set('users', $this->User->find('all'));
-
-        $this->set(compact('counter', 'detail', 'data2', 'slug'));
-
-
-    }
-    public function admin_ajax(){
+         $this->set(compact('counter', 'detail', 'data2', 'slug'));
         
         
     }
-    public function admin_findajax(){
+    public function admin_ajax()
+    {
+         
+    }
+    public function admin_findajax()
+    {
         
-         if($this->request->is('post')){
+        if ($this->request->is('post')) {
             $data = array();
             $this->set('title_for_layout', 'News');
             if ($this->request->data['keyword'] != '') {
-                 $data = $this->News->find('all', array(
+                $data = $this->News->find('all', array(
                     'conditions' => array(
-                        'News.title Like'=>'%'. $this->request->data['keyword'] . '%',
+                        'News.title Like' => '%' . $this->request->data['keyword'] . '%'
                     ),
                     'recursive' => -1
                 ));
-            }  
-            $this->set('data',$data);
+            }
+            $this->set('data', $data);
         }
     }
     

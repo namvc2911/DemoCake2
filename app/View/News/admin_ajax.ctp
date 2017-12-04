@@ -16,9 +16,20 @@
 ?>
 <!-- Page-Level Demo Scripts - Tables - Use for reference -->
 <script>
-$(document).ready(function() {
-    $('#dataTables-example').DataTable({
-        responsive: true
+$(document).ready(function(){
+    $( "#link" ).keyup(function(e){
+        var key = $( "#link" ).val();
+        $.ajax({
+            type: "POST",
+            url: '/DemoCake/admin/news/findajax',
+            data : {
+                 keyword :key,
+            },
+            dataType: 'text',
+            success : function (result){
+                $('.content').html(result);
+            }
+        });
     });
 });
 </script>
@@ -46,21 +57,3 @@ $(document).ready(function() {
 
     </div>
 
-<script>
-$(document).ready(function(){
-    $( "#link" ).keyup(function(e){
-        var key = $( "#link" ).val();
-        $.ajax({
-            type: "POST",
-            url: '/DemoCake/admin/news/findajax',
-            data : {
-                 keyword :key,
-            },
-            dataType: 'text',
-            success : function (result){
-                $('.content').html(result);
-            }
-        });
-    });
-});
-</script>
