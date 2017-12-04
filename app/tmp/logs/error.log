@@ -16585,3 +16585,31 @@ Stack Trace:
 #1 D:\xampp\htdocs\DemoCake\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(NewsController), Object(CakeRequest), Object(CakeResponse))
 #2 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2017-12-04 04:38:19 Error: Fatal Error (4): syntax error, unexpected '===' (T_IS_IDENTICAL) in [D:\xampp\htdocs\DemoCake\app\View\News\admin_list.ctp, line 94]
+2017-12-04 04:38:19 Error: [FatalErrorException] syntax error, unexpected '===' (T_IS_IDENTICAL)
+Request URL: /DemoCake/admin/news/list
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'D:\\xampp\\htdocs...', 94)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'D:\\xampp\\htdocs...', 94, Array)
+#2 D:\xampp\htdocs\DemoCake\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'D:\\xampp\\htdocs...', 94, Array)
+#3 D:\xampp\htdocs\DemoCake\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-12-04 04:39:29 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_both.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-12-04 04:39:30 Error: [MissingControllerException] Controller class TemplateAdminController could not be found.
+Exception Attributes: array (
+  'class' => 'TemplateAdminController',
+  'plugin' => NULL,
+)
+Request URL: /DemoCake/template_admin/vendor/images/sort_asc.png
+Stack Trace:
+#0 D:\xampp\htdocs\DemoCake\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

@@ -257,6 +257,8 @@
                         </li>
                         <li>
                             <?php echo $this->Html->link('Add',array('controller'=>'news','action'=>'add'),array('escape'=>false))?>
+
+                               <?php echo $this->Html->link('Ajax',array('controller'=>'news','action'=>'ajax'),array('escape'=>false))?>
                             <!--Or-->
                             <!--<a href="/admin/users/add">Add</a>-->
                         </li>
