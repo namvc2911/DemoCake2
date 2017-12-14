@@ -91,22 +91,21 @@
 }
   function update_user_data(response) 
 {
-  $result = "";
+    console.log(response);
       $.ajax({
             type: "POST",
            
             data: response,
-            url: '<?php echo $this->Html->url(array('controller'=>'users','action'=>'google')) ?>',
+            url: '<?php echo $this->Html->url(array('controller'=>'users','action'=>'google')) ;?>',
             success: function(result) {
-              alert('Đăng nhập thành công: ');
-               window.location.href = '<?php echo $this->Html->url(array('controller'=>'users','action'=>'list')) ?>';
+              
             }
       });
 }
 function signOut() {
    var auth2 = gapi.auth2.getAuthInstance();
    auth2.signOut().then(function () {
-     console.log('User signed out.');
+     console.log('đăng xuất thành công: .');
    });
  }
 </script>    

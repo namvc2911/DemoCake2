@@ -44,11 +44,18 @@
                     echo "<br/>";
 
                 }?>
-
+                <h1 class="load-more">Load More</h1>
+                <input type="hidden" id="row" value="0">
                 <!-- Blog Comments -->
 
                 <!-- Comments Form -->
-                
+                <div class="content">
+                    <?php foreach($data as $i){
+                        echo $i['News']['title'];
+                        echo "<br/>";
+
+                    } ?>
+                </div>
 
                 <hr>
 
@@ -94,3 +101,25 @@
         </div>
         <!-- /.row -->
     </div>
+    <script>
+        $(document).ready(function(){
+
+    // Load more data
+    $('.load-more').click(function(){
+       
+       $.ajax({
+         type : 'post',
+         data : "",
+         url : '<?php echo $this->Html->url(array('controller'=>'news','action'=>'review'))?>',
+         success : function (result){
+            console.log('Hello');
+              // $('.content').html(result);
+         }
+       });
+
+      
+
+    });
+
+});
+    </script>

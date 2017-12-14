@@ -107,7 +107,6 @@ class NewsController extends AppController
             )
         ));
         
-        $this->set('title_for_layout', 'News');
         $data2 = $this->News->find('all', array(
             'oder' => array(
                 'News.create_at desc'
@@ -119,7 +118,16 @@ class NewsController extends AppController
         $this->loadModel('User');
         $this->set('users', $this->User->find('all'));
          $this->set(compact('counter', 'detail', 'data2', 'slug'));
-        
+        if($this->request->is('post')){
+             $data = $this->News->find('all', array(
+            'oder' => array(
+                'News.create_at asc'
+            ),
+            
+            'limit' => '10'
+        ));
+             $this->News->set('data',$data);
+        }
         
     }
     public function admin_ajax()
@@ -132,7 +140,7 @@ class NewsController extends AppController
         if ($this->request->is('post')) {
             $data = array();
             $this->set('title_for_layout', 'News');
-            if ($this->request->data['keyword'] != '') {
+             if ($this->request->data['keyword'] != '') {
                 $data = $this->News->find('all', array(
                     'conditions' => array(
                         'News.title Like' => '%' . $this->request->data['keyword'] . '%'

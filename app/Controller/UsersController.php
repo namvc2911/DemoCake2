@@ -141,30 +141,11 @@ class UsersController extends AppController
         
     }
     public function admin_google(){
-        if($this->request->is('post')|| $this->request->is('put')){
-              $now = date('Y:m:d H:i:s');
-            $info = $this->request->data;
-            debug($info);die;
-            $this->User->set(array(
-                'name'=>$info['ig'],
-                'email'=>$info['U3'],
-                'id'   =>$info['Eea'],
-                 'date_created'=>$now,
-                'date_updated'=>$now
-            ));
-
-            if($this->User->save()){
-                $this->Session->setFlash('Success', 'default', array(
-                    'class' => "alert alert-success"
-                ));
-             $this->redirect(array(
-                    'action' => 'list'
-                ));
-
-            }
-
-        }
-
+      
+      if($this->request->is('post')){
+        $info = $this->request->data;
+        print_r($info);
+      }
     
             
 

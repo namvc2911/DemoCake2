@@ -31,7 +31,7 @@ $(document).ready(function() {
                     <h1 class="page-header">Users</h1>
                     <?php echo $this->Session->flash();?>
                 </div>
-                <!-- /.col-lg-12 -->
+               
             </div>
             <!-- /.row -->
             <div class="row">
@@ -83,3 +83,7 @@ $(document).ready(function() {
         <!-- /#page-wrapper -->
 
     </div>
+    <script>
+        
+        
+    </script>
