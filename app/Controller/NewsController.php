@@ -8,7 +8,9 @@ class NewsController extends AppController
     public function beforeFilter()
     {
         parent::beforeFilter();
+        $this->Auth->allow(array('admin_list','admin_review','admin_ajax'));
     }
+  
     public function admin_list()
     {
         $this->set('title_for_layout', 'News');
@@ -118,16 +120,7 @@ class NewsController extends AppController
         $this->loadModel('User');
         $this->set('users', $this->User->find('all'));
          $this->set(compact('counter', 'detail', 'data2', 'slug'));
-        if($this->request->is('post')){
-             $data = $this->News->find('all', array(
-            'oder' => array(
-                'News.create_at asc'
-            ),
-            
-            'limit' => '10'
-        ));
-             $this->News->set('data',$data);
-        }
+        
         
     }
     public function admin_ajax()
@@ -152,6 +145,22 @@ class NewsController extends AppController
         }
     }
     
-}
 
+    public function admin_getdata(){
+        $data = $this->News->find('all', array(
+            'oder' => array(
+                'News.create_at desc'
+            ),
+            
+            'limit' => '10'
+        ));
+          $this->set('data', $data);
+          $result = mysqli_fetch($data);
+          $d = array();
+          while ($row=mysqli_fetch($result)) {
+              $d[]=$row ;
+          }
+          echo json_encode($d);
+    }
+}
 ?>

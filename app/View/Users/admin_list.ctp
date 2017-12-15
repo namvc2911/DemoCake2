@@ -8,7 +8,7 @@
 <!-- DataTables JavaScript -->
 <?php
     echo $this->Html->script(array(
-        '../template_admin/vendor/datatables/js/jquery.dataTables.min.js',
+         '../template_admin/vendor/datatables/js/jquery.dataTables.min.js',
         '../template_admin/vendor/datatables-plugins/dataTables.bootstrap.min.js',
         '../template_admin/vendor/datatables-responsive/dataTables.responsive.js',
     ));
@@ -33,6 +33,7 @@ $(document).ready(function() {
                 </div>
                
             </div>
+            Xin chào <b><?php echo $this->Session->read('Auth.User.username');?></b></p>
             <!-- /.row -->
             <div class="row">
                 <div class="col-lg-12">
@@ -49,6 +50,8 @@ $(document).ready(function() {
                                         <th>Name</th>
                                         <th>Username</th>
                                         <th>Email</th>
+                                        <th>Quyền</th>
+
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -60,14 +63,25 @@ $(document).ready(function() {
                                         <td><?php echo $val['User']['name']?></td>
                                         <td><?php echo $val['User']['username']?></td>
                                         <td><?php echo $val['User']['email']?></td>
+                                        <td><?php echo $val['User']['role']?></td>
+
                                         <td>
-                                            <?php echo $this->Html->link('Edit',array('controller'=>'users','action'=>'edit',$val['User']['id']), array('class' => 'btn btn-warning'));
+                                            <?php $g = $this->Session->read('Auth.User.role');
+                                                if($g=='admin'){
+                                                 ?>
+                                                
+
+                                            <?php echo $this->Html->link('Edit',array('controller'=>'users','action'=>'edit',$val['User']['id']), array('class' => 'btn btn-warning','onclick'=>'true'));
                                             ?>
-                                            <?php echo $this->Html->link('Del',array('controller'=>'users','action'=>'delete',$val['User']['id']), array('class' => 'btn btn-danger'));
+                                            <?php echo $this->Html->link('Del',array('controller'=>'users','action'=>'delete',$val['User']['id']), array('class' => 'btn btn-danger','onclick'=>'true'));
                                             ?>
+                                            <?php    }?>
                                         </td>
                                     </tr>
+
                                     <?php }?>
+                                    
+
                                 </tbody>
                             </table>
                             <!-- /.table-responsive -->

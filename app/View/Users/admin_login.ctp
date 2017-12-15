@@ -28,6 +28,7 @@
                     </fb:login-button>
                     <div class="g-signin2" data-longtitle="true" data-onsuccess="Google_signIn" data-theme="light" data-width="200"></div>
                 </div>
+                gfgf
 
             </div>
         </div>
@@ -71,6 +72,7 @@
             url   : '<?php echo $this->Html->url(array('controller'=>'users','action'=>'facebook')) ?>',
             data  :response,
             success : function (result){
+              alert('Đăng nhập thành công: ');
               window.location.href = '<?php echo $this->Html->url(array('controller'=>'users','action'=>'list')) ?>';
               }
               });
@@ -94,19 +96,16 @@
     console.log(response);
       $.ajax({
             type: "POST",
-           
+            // datatype: 'json',
             data: response,
             url: '<?php echo $this->Html->url(array('controller'=>'users','action'=>'google')) ;?>',
-            success: function(result) {
-              
-            }
+            success: function(response) {
+            
+              alert('Đăng nhập thành công: ');
+               window.location.href = "<?php echo $this->Html->url(array('controller'=>'users','action'=>'list')) ?>";
+            } 
       });
 }
-function signOut() {
-   var auth2 = gapi.auth2.getAuthInstance();
-   auth2.signOut().then(function () {
-     console.log('đăng xuất thành công: .');
-   });
- }
+
 </script>    
 <script src="https://apis.google.com/js/platform.js" async defer></script>

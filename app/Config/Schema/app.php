@@ -36,9 +36,6 @@ class AppSchema extends CakeSchema {
 		'image' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 100, 'collate' => 'utf8_unicode_ci', 'comment' => 'hình', 'charset' => 'utf8'),
 		'create_at' => array('type' => 'timestamp', 'null' => false, 'default' => 'CURRENT_TIMESTAMP'),
 		'update_at' => array('type' => 'timestamp', 'null' => false, 'default' => '0000-00-00 00:00:00'),
-		'adsfsdfas' => array('type' => 'string', 'null' => true, 'default' => null, 'length' => 24, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
-		'hello' => array('type' => 'string', 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
-		'fsdgsdfg' => array('type' => 'string', 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
 		'indexes' => array(
 			'PRIMARY' => array('column' => 'id', 'unique' => 1),
 			'fk_user_news' => array('column' => 'user_id', 'unique' => 0)
@@ -64,6 +61,7 @@ class AppSchema extends CakeSchema {
 		'username' => array('type' => 'string', 'null' => true, 'default' => null, 'length' => 60, 'collate' => 'utf8_unicode_ci', 'charset' => 'utf8'),
 		'password' => array('type' => 'string', 'null' => true, 'default' => null, 'length' => 100, 'collate' => 'utf8_unicode_ci', 'charset' => 'utf8'),
 		'facebook_id' => array('type' => 'biginteger', 'null' => true, 'default' => null, 'length' => 11),
+		'role' => array('type' => 'string', 'null' => true, 'default' => 'views', 'length' => 10, 'collate' => 'utf8_unicode_ci', 'charset' => 'utf8'),
 		'date_created' => array('type' => 'datetime', 'null' => false, 'default' => null),
 		'date_updated' => array('type' => 'datetime', 'null' => false, 'default' => null),
 		'indexes' => array(

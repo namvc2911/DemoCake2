@@ -31,8 +31,8 @@
                                             <?php echo $this->Form->input('content', array('class'=>'form-control')); ?>
                                         </div>
 
-                                         
-                                        <button type="submit" class="btn btn-default">Save</button>
+                                        
+                                        <button type="submit" class="btn btn-default">Save</button> 
                                     <?php echo $this->Form->end();?>
                                 </div>
                         </div>

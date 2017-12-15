@@ -35,6 +35,13 @@
                                             <?php echo $this->Form->input('confirm_password', array('type'=>'password', 'class'=>'form-control')); ?>
                                         </div>
                                         <div class="form-group">
+                                            <label>Quyền</label>
+
+                                           <?php echo $this->Form->input('role', array('type'=>'selected','options'=>array('admin','views'),'default'=>'views')); ?>
+                                            
+                                      
+                                        </div>
+                                        <div class="form-group">
                                             <label>Họ và tên</label>
                                            <?php echo $this->Form->input('name', array('class'=>'form-control', )); ?>
                                         </div>

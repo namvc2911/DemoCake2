@@ -85,11 +85,13 @@ $(document).ready(function() {
                                                 ));
                                             ?> -->
                                             <?php echo $this->Html->link('Review',array('controller'=>'news','action'=>'review',$val['News']['slug']), array('class' => 'btn btn-primary'));
+                                                    $g = $this->Session->read('Auth.User.role');
+                                                    if($g=='admin'){
 
+                                                echo $this->Html->link('Edit',array('controller'=>'news','action'=>'edit',$val['News']['id']), array('class' => 'btn btn-warning','onclick'=>'true'));
 
-                                                echo $this->Html->link('Edit',array('controller'=>'news','action'=>'edit',$val['News']['id']), array('class' => 'btn btn-warning'));
-
-                                                echo $this->Html->link('Del',array('controller'=>'news','action'=>'delete',$val['News']['id']), array('class' => 'btn btn-danger'));
+                                                echo $this->Html->link('Del',array('controller'=>'news','action'=>'delete',$val['News']['id']), array('class' => 'btn btn-danger','onclick'=>'true'));
+                                            }
                                                ?>
 
                                             

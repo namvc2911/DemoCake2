@@ -8,8 +8,17 @@ class UsersController extends AppController
     {
         
         parent::beforeFilter();
-        $this->Auth->allow(array('admin_facebook','admin_list','admin_google','admin_add'));
-        
+        $this->Auth->allow(array('admin_add','admin_list','admin_facebook','admin_google'));
+    }
+    public function isAuthorized($user){
+        if (in_array($this->request->action, ['admin_edit', 'admin_delete'])) {
+            $id = (int) $this->request->params['pass'][0];
+      if ($id == $user['id']) {
+        return true;
+      }
+    }
+
+    return parent::isAuthorized($user);
     }
     public function admin_login()
     {
@@ -41,6 +50,7 @@ class UsersController extends AppController
         ));
         //đưa dữ liệu lấy được qua view bằng biến users
         $this->set('users', $array_user);
+
     }
     public function admin_delete($id = null)
     {
@@ -99,11 +109,15 @@ class UsersController extends AppController
             $this->User->set(array(
                 'date_updated' => $now
             ));
+            
             if ($this->User->save($this->request->data)) {
-              
+              $this->Session->setFlash('Đăng ký thành công', 'default', array(
+                    'class' => "alert alert-success"
+                ));
                 $this->redirect(array('controller'=>'users',
                     'action' => 'list'
                 ));
+                 
             }
             
             
@@ -128,7 +142,7 @@ class UsersController extends AppController
 
         ));
         if($this->User->save($this->request->data)){
-            $this->Session->setFlash('Success', 'default', array(
+            $this->Session->setFlash('Đăng ký thành công', 'default', array(
                     'class' => "alert alert-success"
                 ));
              $this->redirect(array(
@@ -142,10 +156,12 @@ class UsersController extends AppController
     }
     public function admin_google(){
       
-      if($this->request->is('post')){
-        $info = $this->request->data;
-        print_r($info);
-      }
+      // if($this->request->is('post')){
+        $info = ($this->request->data);
+        debug($info);die;
+      
+      // }
+        
     
             
 

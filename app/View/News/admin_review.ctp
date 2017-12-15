@@ -50,11 +50,7 @@
 
                 <!-- Comments Form -->
                 <div class="content">
-                    <?php foreach($data as $i){
-                        echo $i['News']['title'];
-                        echo "<br/>";
-
-                    } ?>
+                    
                 </div>
 
                 <hr>
@@ -109,11 +105,15 @@
        
        $.ajax({
          type : 'post',
-         data : "",
-         url : '<?php echo $this->Html->url(array('controller'=>'news','action'=>'review'))?>',
-         success : function (result){
-            console.log('Hello');
-              // $('.content').html(result);
+         datatype : 'json',
+         url : '<?php echo $this->Html->url(array('controller'=>'news','action'=>'getdata'))?>',
+         success : function (d){
+           for(var i in d){
+                var row = d[i];
+                var title = row['title'];
+                var content = row['content'];
+                $('.content').append('<p>title: '+title+'<p>content'+content);
+           }
          }
        });
 

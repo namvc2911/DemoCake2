@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <meta name="google-signin-client_id" content="117942054522-k73mafkm3amnkleghq2prnpsictf1iut.apps.googleusercontent.com">
+    <meta name="google-signin-client_id" content="257410396803-0obs6qh1pqopb203610gf5obqhuig4a2.apps.googleusercontent.com">
     <title>Trang web demo CakePHP</title>
     <?php
         echo $this->Html->css(array(

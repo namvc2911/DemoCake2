@@ -57,6 +57,12 @@ class AppController extends Controller {
         }else{
             $this->Auth->allow();
         }
-		$this->set('current_user', $this->Auth->user());
+	}
+	public function isAuthorized($user)
+	{
+    if (isset($user['role']) && $user['role'] === 'admin') {
+        return true;
+    }
+    return false;
 	}
 }

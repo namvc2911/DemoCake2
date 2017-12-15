@@ -1338,7 +1338,7 @@ class MigrationShell extends AppShell {
  */
 	public function beforeAction(&$Migration, $type, $data) {
 		if (isset($this->_messages[$type])) {
-			$message = CakeText::insert($this->_messages[$type], $data);
+			$message = String::insert($this->_messages[$type], $data);
 			$this->out('      > ' . $message);
 		}
 	}
