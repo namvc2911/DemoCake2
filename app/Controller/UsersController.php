@@ -41,6 +41,7 @@ class UsersController extends AppController
         ));
         //đưa dữ liệu lấy được qua view bằng biến users
         $this->set('users', $array_user);
+
     }
     public function admin_delete($id = null)
     {
@@ -142,10 +143,10 @@ class UsersController extends AppController
     }
     public function admin_google(){
       
-      if($this->request->is('post')){
-        $info = $this->request->data;
-        print_r($info);
-      }
+      
+        $info = ($this->request->data['Eea']);
+        debug($info);die;
+      
     
             
 
